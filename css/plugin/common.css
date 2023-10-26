@@ -1,0 +1,29 @@
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+#container {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+
+#container .main {
+    width: 3840px;
+    height: 2160px;
+    position: absolute;
+    overflow: hidden;
+    background: url("../") no-repeat left top; /*전체 통 이미지 배경*/
+
+}
+
+#container .main > section {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    box-sizing: border-box;
+}
+

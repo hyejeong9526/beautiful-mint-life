@@ -1,0 +1,1361 @@
+@charset "utf-8";
+/* CSS Document */
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+
+    /** scrollBox **/
+#scrollBox {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+
+#scrollBox > div:not(.wrap) {
+    display: none!important;
+}
+
+
+#scrollBox .wrap {
+    width: 5760px;
+    height: 2940px;
+    position: absolute;
+    overflow: hidden;
+    background: #fff;
+    /*전체 통 이미지 배경*/
+    transition: all 3s;
+    -webkit-transform: scale(.34);
+    -moz-transform: scale(.34);
+    -ms-transform: scale(.34);
+    -o-transform: scale(.34);
+    transform: scale(.34);
+    transform-origin: center;
+}
+
+#scrollBox .wrap.on {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    transition-delay: 2s;
+}
+
+#scrollBox .wrap > div {
+    width: 1920px;
+    height: 980px;
+    float: left;
+    box-sizing: border-box;
+}
+#gnb{
+    background: url("../img/gnb/bg.png") no-repeat left top;
+    width: 137px;
+    height: 702px;
+    position:fixed;
+    top:100px;
+    right: 30px;
+    z-index: 9999;
+    -webkit-transform: translate(0,-100px);
+    -moz-transform: translate(0,-100px);
+    -ms-transform: translate(0,-100px);
+    -o-transform: translate(0,-100px);
+    transform: translate(0,-100px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+
+#gnb.on{
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    opacity: 1;
+    transition-delay:3.5s;
+}
+
+
+#gnb .gnb01{
+    position:absolute;
+    top:190px;
+    left:30px;
+    width: 88px;
+    height: 495px;
+
+}
+
+
+#gnb .gnb01 > li >a{display: block; width: 81px; height: 68px;}
+
+#gnb .gnb01 > li:nth-child(1)> a{height: 86px;background: url("../img/gnb/gnb_01.png") no-repeat left top;}
+#gnb .gnb01 > li:nth-child(2)> a{background: url("../img/gnb/gnb_02.png") no-repeat left top;}
+#gnb .gnb01 > li:nth-child(3)> a{background: url("../img/gnb/gnb_03.png") no-repeat left top;}
+#gnb .gnb01 > li:nth-child(4)> a{background: url("../img/gnb/gnb_04.png") no-repeat left top;}
+#gnb .gnb01 > li:nth-child(5)> a{background: url("../img/gnb/gnb_05.png") no-repeat left top;}
+#gnb .gnb01 > li:nth-child(6)> a{background: url("../img/gnb/gnb_06.png") no-repeat left top;}
+#gnb .gnb01 > li:nth-child(7)> a{height: 75px; background: url("../img/gnb/gnb_07.png") no-repeat left top;}
+
+#gnb .gnb01 > li:nth-child(1):hover > a,#gnb .gnb01 > li:nth-child(1) > a.on{background: url("../img/gnb/gnb_hover_01.jpg") no-repeat left top;}
+#gnb .gnb01 > li:nth-child(2):hover > a,#gnb .gnb01 > li:nth-child(2) > a.on{background: url("../img/gnb/gnb_hover_02.jpg") no-repeat left top;}
+#gnb .gnb01 > li:nth-child(3):hover > a,#gnb .gnb01 > li:nth-child(3) > a.on{background: url("../img/gnb/gnb_hover_03.jpg") no-repeat left top;}
+#gnb .gnb01 > li:nth-child(4):hover > a,#gnb .gnb01 > li:nth-child(4) > a.on{background: url("../img/gnb/gnb_hover_04.jpg") no-repeat left top;}
+#gnb .gnb01 > li:nth-child(5):hover > a,#gnb .gnb01 > li:nth-child(5) > a.on{background: url("../img/gnb/gnb_hover_05.jpg") no-repeat left top;}
+#gnb .gnb01 > li:nth-child(6):hover > a,#gnb .gnb01 > li:nth-child(6) > a.on{background: url("../img/gnb/gnb_hover_06.jpg") no-repeat left top;}
+#gnb .gnb01 > li:nth-child(7):hover > a,#gnb .gnb01 > li:nth-child(7) > a.on{background: url("../img/gnb/gnb_hover_07.jpg") no-repeat left top;}
+
+#gnb .banner{
+    position:absolute;
+    top:702px;
+    left:6px;
+}
+
+#gnb .sound{
+    position: absolute;
+    top:-62px;
+    right: 100px;
+    cursor: pointer;
+}
+
+
+#gnb .sound > div{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+#gnb .sound > div:nth-child(1){display: block;}
+
+
+#scene01 {
+    background: url("../img/background/background_01.jpg") no-repeat left top;
+}
+#scene01 .stage01{
+    width: 917px;
+    height: 994px;
+    background: url("../img/background/stage_01.jpg") no-repeat left top;
+    position: absolute;
+    top:310px;
+    left:1443px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+#scene01 .stage01:hover{background: url("../img/background/stage_hover_01.jpg") no-repeat left top;}
+
+#scene01 .streetlight01{
+    position: absolute;
+    top:1242px;
+    left:1933px;
+    z-index: 9999;
+}
+#scene01 .streetlight02{
+    position: absolute;
+    top:842px;
+    left:2636px;
+    z-index: 9999;
+}
+#scene01 > .people05{
+    position: absolute;
+    top:1022px;
+    left:2067px;
+    z-index: 9999;
+
+}
+#scene01 .balloon1{
+    position:absolute;
+    top:179px;
+    left:758px;
+    animation: balloon2 2s linear infinite alternate 3s;
+}
+@keyframes balloon1 {
+    0%{
+        top:179px;
+    }
+    50%{
+        top: 200px;
+    }
+    100%{
+        top:230px;
+    }
+}
+/*ene01 끝*/
+
+
+#scene02 {
+    background: url("../img/background/background_02.jpg") no-repeat left top;
+    position: relative;
+
+
+}
+#scene02 .shop{
+    width: 634px;
+    height: 646px;
+    background: url("../img/background/stage_02.jpg") no-repeat left top;
+    position: absolute;
+    top:309px;
+    left:726px;
+    cursor: pointer;
+ }
+#scene02 .shop:hover {background: url("../img/background/stage_hover_02.jpg") no-repeat left top;}
+
+#scene02 .streetlight03{
+    position: absolute;
+    top:828px;
+    left:1197px;
+    z-index: 9999;
+}
+#scene02 .balloon{
+    width: 203px;
+    height: 200px;
+    position: absolute;
+    left: 934px;
+    top: 884px;
+    overflow: hidden;
+    background: url("../img/animate/balloon.png") no-repeat 0 0;
+    animation: balloon 2s steps(13) infinite;
+    z-index: 9999;
+    /*전체 카운트 숫자중에서 1빼고*/
+}
+@keyframes balloon{
+    to {
+        background-position: -2639px;
+        /*전체이미지 길이에서 하나 좌우값만큼 빼고*/
+    }
+}
+/*scene02 끝*/
+
+
+
+#scene03 {
+    position:relative;
+    background: url("../img/background/background_03.jpg") no-repeat left top;
+
+}
+
+#scene03 > .stage03{
+    position: absolute;
+    top:427px;
+    left:-104px;
+    background: url("../img/background/stage_03.jpg") no-repeat left top;
+    width: 724px;
+    height: 788px;
+    cursor: pointer;
+    z-index: 9999;
+}
+#scene03 > .stage03:hover{
+    background: url("../img/background/stage_hover_03.jpg") no-repeat left top;
+}
+
+#scene03 > .yellow {
+    position: absolute;
+    top: 910px;
+    left: 619px;
+    z-index: 999;
+}
+#scene03 > .people06{
+    position:absolute;
+    top:912px;
+    left:-339px;
+    z-index: 9999;
+}
+#scene03 .balloon2{
+    position:absolute;
+    top:100px;
+    right:600px;
+    animation: balloon2 2s linear infinite alternate 3s;
+}
+@keyframes balloon2 {
+    0%{
+        top:100px;
+    }
+    50%{
+        top: 130px;
+    }
+    100%{
+        top:250px;
+    }
+}
+#scene03 .balloon3{
+    position:absolute;
+    top:150px;
+    right:1114px;
+    animation: balloon3 2s linear infinite alternate 3s;
+}
+@keyframes balloon3{
+    0%{
+        top:150px;
+    }
+    50%{
+        top: 200px;
+    }
+    100%{
+        top:250px;
+    }
+}
+
+#scene03 .friend{
+    width: 145px;
+    height: 232px;
+    position: absolute;
+    left: -461px;
+    top: 961px;
+    overflow: hidden;
+    background: url("../img/animate/friend.png") no-repeat 0 0;
+    animation: friend 2s steps(14) infinite;
+    z-index: 9999;
+    /*전체 카운트 숫자중에서 1빼고*/
+}
+@keyframes friend{
+    to {
+        background-position: -2030px;
+        /*전체이미지 길이에서 하나 좌우값만큼 빼고*/
+    }
+}
+/*scene03 끝 */
+
+
+#scene04 {
+    background: url("../img/background/background_04.jpg") no-repeat left top;
+}
+
+/*scene04 끝 */
+
+
+
+
+#scene05 {
+    position: relative;
+    background: url("../img/background/background_05.jpg") no-repeat left top;
+}
+#scene05 > .title{
+    position: absolute;
+    top:136px;
+    left:464px;
+    background: url("../img/background/title.jpg") no-repeat left top;
+    width: 1184px;
+    height: 718px;
+    cursor: pointer;
+}
+#scene05 > .title:hover{
+    background: url("../img/background/title_hover.jpg") no-repeat left top;
+}
+#scene05 > .people02{
+    position: absolute;
+    bottom:-224px;
+    left:809px;
+    z-index: 9999;
+}
+
+#scene05 .girl{
+    width: 123px;
+    height: 190px;
+    position: absolute;
+    left: 1180px;
+    top: 278px;
+    overflow: hidden;
+    background: url("../img/animate/girl.png") no-repeat 0 0;
+    animation: girl 1s steps(8) infinite;
+    z-index: 9999;
+    /*전체 카운트 숫자중에서 1빼고*/
+}
+
+@keyframes girl{
+    to {
+        background-position: -984px;
+        /*전체이미지 길이에서 하나 좌우값만큼 빼고*/
+    }
+}
+
+#scene05 .guitar{
+    width: 92px;
+    height: 180px;
+    position: absolute;
+    left: 576px;
+    top: 606px;
+    overflow: hidden;
+    background: url("../img/animate/guitar.png") no-repeat 0 0;
+    animation: guitar 1s steps(8) infinite;
+    z-index: 9999;
+    /*전체 카운트 숫자중에서 1빼고*/
+}
+@keyframes guitar{
+    to {
+        background-position: -727px;
+        /*전체이미지 길이에서 하나 좌우값만큼 빼고*/
+    }
+}
+
+#scene05 .child{
+    width: 111px;
+    height: 134px;
+    position: absolute;
+    left: 344px;
+    top: 299px;
+    overflow: hidden;
+    background: url("../img/animate/child.png") no-repeat 0 0;
+    animation: child 1s steps(8) infinite;
+    z-index: 9999;
+    /*전체 카운트 숫자중에서 1빼고*/
+}
+
+@keyframes child{
+    to {
+        background-position: -888px;
+        /*전체이미지 길이에서 하나 좌우값만큼 빼고*/
+    }
+}
+
+#scene05 .coach{
+    width: 231px;
+    height: 198px;
+    background: rgba(0,0,0,.7);
+    position: absolute;
+    left:910px;
+    top:714px;
+    z-index: 9999;
+    border-radius: 25px;
+    animation: coach 1s 3s forwards normal linear;
+    opacity: 0;
+}
+
+@keyframes coach {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
+
+#scene05 .coach > div{position: absolute;}
+#scene05 .coach > div:nth-child(1){left: 80px; top:126px; animation:coach01 infinite .5s alternate linear;}
+#scene05 .coach > div:nth-child(2){rignt:80px; top:126px; animation: coach02 infinite .5s alternate linear;}
+#scene05 .coach > div:nth-child(3){top:100px; right: 107px; animation: coach03 infinite .5s alternate linear; }
+#scene05 .coach > div:nth-child(4){
+    top:119px;
+    left:97px;
+}
+#scene05 .coach > p{
+    padding-top: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 28px;
+}
+@keyframes coach01 {
+    0%{left: 80px;}
+    100%{left: 76px;}
+}
+
+@keyframes coach02 {
+    0%{right: 80px;}
+    100%{right:76px;}
+}
+
+@keyframes coach03 {
+    0%{top: 100px;}
+    100%{top:96px;}
+}
+
+/*scene05 끝 */
+
+
+#scene06 {
+    position: relative;
+    background: url("../img/background/background_06.jpg") no-repeat left top;
+}
+
+
+#scene06 > .garden{
+    position:absolute;
+    top:320px;
+    left:582px;
+}
+#scene06 > .bench{
+    position:absolute;
+    top:570px;
+    left:362px;
+}
+#scene06 .streetlight05{
+    position: absolute;
+    top:396px;
+    left:290px;
+    z-index: 9999;
+}
+
+#scene06 > .people01{
+    position: absolute;
+    bottom:323px;
+    left:-81px;
+    z-index: 9999;
+}
+
+
+/*scene06 끝 */
+
+
+#scene07 {
+    position: relative;
+    background: url("../img/background/background_07.jpg") no-repeat left top;
+}
+
+
+
+#scene07 > .stage06{
+    position: absolute;
+    top:-445px;
+    left:1339px;
+    z-index: 999;
+    background: url("../img/background/stage_06.jpg") no-repeat left top;
+    width: 1026px;
+    height: 967px;
+    cursor: pointer;
+
+}
+#scene07 > .stage06:hover{
+    background: url("../img/background/stage_hover_06.jpg") no-repeat left top;
+}
+#scene07 .streetlight04{
+    position: absolute;
+    bottom:280px;
+    right:98px;
+    z-index: 9999;
+}
+
+#scene07 .white{
+    width: 92px;
+    height: 198px;
+    position: absolute;
+    right: -488px;
+    bottom: 700px;
+    overflow: hidden;
+    background: url("../img/animate/white.png") no-repeat 0 0;
+    animation: white 1s steps(12) infinite;
+    z-index: 9999;
+    /*전체 카운트 숫자중에서 1빼고*/
+}
+
+@keyframes white {
+    to {
+        background-position: -1104px;
+        /*전체이미지 길이에서 하나 좌우값만큼 빼고*/
+    }
+}
+#scene07 > .people04{
+    position: absolute;
+    bottom:148px;
+    right:62px;
+    z-index: 9999;
+}
+
+/*scene07 끝 */
+
+#scene08 {
+    position: relative;
+    background: url("../img/background/background_08.jpg") no-repeat left top;
+}
+#scene08 .stage05{
+    position: absolute;
+    top:259px;
+    left:571px;
+    background: url("../img/background/stage_05.jpg") no-repeat left top;
+    width: 690px;
+    height: 721px;
+    cursor: pointer;
+    z-index: 9999;
+}
+#scene08 .stage05:hover{background: url("../img/background/stage_hover_05.jpg") no-repeat left top;}
+
+/*#scene08 .stage05 .video {*/
+/*    transform: skew(-27deg) rotate(-27deg);*/
+/*    width:424px;*/
+/*    height: 288px;*/
+/*    position: absolute;*/
+/*    top:204px;*/
+/*    left:118px;*/
+/*    z-index: 9999;*/
+/*}*/
+
+#scene08 .people03{
+    position: absolute;
+    bottom:267px;
+    right:38px;
+    z-index: 9999;
+}
+
+/*scene08 끝 */
+#scene09 {
+    position: relative;
+    background: url("../img/background/background_09.jpg") no-repeat left top;
+
+}
+#scene09 > .stage04{
+    position: absolute;
+    top:-208px;
+    left:-267px;
+    background: url("../img/background/stage_04.jpg") no-repeat left top ;
+    width: 777px;
+    height: 736px;
+    cursor: pointer;
+}
+#scene09 > .stage04:hover{
+    background: url("../img/background/stage_hover_04.jpg") no-repeat left top;
+}
+#scene09 > .yellow2 {
+    position: absolute;
+    top: 411px;
+    left: 426px;
+    z-index: 999;
+}
+#scene09 .wind{
+    width: 499px;
+    height: 760px;
+    position: absolute;
+    left: 697px;
+    top: 150px;
+    overflow: hidden;
+    background: url("../img/animate/wind.png") no-repeat 0 0;
+    animation: wind 3s steps(22) infinite;
+    z-index: 9999;
+    /*전체 카운트 숫자중에서 1빼고*/
+}
+
+@keyframes wind {
+    to {
+        background-position: -10978px;
+        /*전체이미지 길이에서 하나 좌우값만큼 빼고*/
+    }
+}
+#scene09 .girl2{
+    width: 100px;
+    height: 190px;
+    position: absolute;
+    left: 375px;
+    top: -437px;
+    overflow: hidden;
+    background: url("../img/animate/girl2.png") no-repeat 0 0;
+    animation: girl2 1s steps(6) infinite;
+    z-index: 9999;
+    /*전체 카운트 숫자중에서 1빼고*/
+}
+
+@keyframes girl2 {
+    to {
+        background-position: -600px;
+        /*전체이미지 길이에서 하나 좌우값만큼 빼고*/
+    }
+}
+/*scene09 끝*/
+
+
+
+/*------------------------------------------pop section*/
+
+
+
+#pop01{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: none;
+}
+#pop01 .event{
+    width: 888px;
+    height: 900px;
+    /*background: url("../img/pop/event.jpg") no-repeat left top;*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -450px 0 0 -444px;
+}
+#pop01 .event > div{
+    position: absolute;
+}
+
+#pop01 .event > div:nth-child(1){
+    left: 70px;
+    top: 63px;
+}
+#pop01 .event .front_f{
+    right: -12px;
+    bottom: 181px;
+}
+#pop01 .event .flower{
+    left:70px;
+    top:319px;
+    animation: pop01_flower infinite 5s linear normal;
+}
+
+@keyframes pop01_flower {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+#pop01 .event .flower2{
+    right:94px;
+    bottom:582px;
+    animation: pop01_flower infinite 5s linear normal;
+}
+
+@keyframes pop01_flower {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+#pop01 .event .pop01_main{
+    left: 50%;
+    top: 50%;
+    margin:-373px 0 0 -262px;
+}
+
+#pop01 .event .close{
+    width: 44px;
+    height: 45px;
+    right: 25px;
+    top: 19px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+#pop01 .event .close:hover{transform: rotate(360deg);}
+
+/*-----------------------------------pop end------------------------*/
+#mbs{
+    width: 100%;
+    height: 100%;
+    background: url("../img/sub/mbs.jpg") no-repeat left top;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: none;
+}
+
+#mbs .lineup01 > div{
+    position:absolute;
+}
+#mbs .lineup01 .mbs_title{
+    position: absolute;
+    top:50px;
+    left: 620px;
+}
+#mbs > .lineup01 > .button01{
+    background: url("../img/sub/mbs2_14.png") no-repeat left top;
+    width: 154px;
+    height: 53px;
+    cursor: pointer;
+    position: absolute;
+    top: 265px;
+    left:818px;
+}
+#mbs > .lineup01 > .button01:hover,#mbs > .lineup01 > .button01.on{background: url("../img/sub/mbs_14.png") no-repeat left top;}
+#mbs .lineup01 > .button02{
+    background: url("../img/sub/mbs_15.png") no-repeat left top;
+    width: 154px;
+    height: 53px;
+    cursor: pointer;
+    position: absolute;
+    top: 265px;
+    left:983px;
+}
+#mbs > .lineup01 > .button02:hover,#mbs > .lineup01 > .button02.on{background: url("../img/sub/mbs2_15.png") no-repeat left top;}
+#container{
+    width: 1040px;
+    position: absolute;
+    left: 437px;
+    top: 365px;
+    /*margin-left: -520px;*/
+
+}
+
+#container > section {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#container > section >.photo6{margin: 26px 27px;}
+#container > section >.photo7{margin: 26px -1px;}
+#container > section:nth-child(2){display: none;}
+
+
+
+#container > section > article{
+    float: left;
+    height: 270px;
+    width: 212px;
+    margin-left: 48px;
+}
+#container > section > .photo5{
+    margin: 26px 0 0 184px;
+}
+#container > section > .photo6{
+   margin-top: 26px;
+}
+
+#mbs .lineup01 .close{
+    width: 44px;
+    height: 45px;
+    right: 25px;
+    top: 19px;
+    cursor: pointer;
+    transition: all 1s;
+}
+#mbs .lineup01 .close:hover{transform: rotate(360deg);}
+
+#mbs .lineup01 .flower{
+    position: absolute;
+    top:214px;
+    right:431px;
+    animation: pop01_flower infinite 5s linear normal;
+}
+
+#mbs .lineup01 .flower_2{
+    position: absolute;
+    top:297px;
+    left:454px;
+    animation: pop01_flower infinite 5s linear normal;
+}
+#mbs .lineup01 .flower_3{
+    position: absolute;
+    top:700px;
+    left:500px;
+    animation: pop01_flower infinite 5s linear normal;
+}
+#mbs .lineup01 .flower2{
+    position: absolute;
+    top:144px;
+    left:470px;
+}
+#mbs .lineup01 .flower3{
+    position: absolute;
+    bottom:168px;
+    right:555px;
+}
+
+/*mbs end--------------------------------------------------------------*/
+#lfg{
+    width: 100%;
+    height: 100%;
+    background: url("../img/sub/lfg.jpg") no-repeat left top;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: none;
+}
+
+#lfg .lineup02 > div{
+    position:absolute;
+}
+#lfg .lineup02 .lfg_title{
+    position: absolute;
+    top:50px;
+    left: 620px;
+}
+#lfg > .lineup02 > .button01{
+    background: url("../img/sub/lfg_l.png") no-repeat left top;
+    width: 154px;
+    height: 53px;
+    cursor: pointer;
+    position: absolute;
+    top: 265px;
+    left:818px;
+}
+#lfg > .lineup02 > .button01:hover,#lfg > .lineup02 > .button01.on{background: url("../img/sub/lfg_2l.png") no-repeat left top;}
+#lfg .lineup02 > .button02{
+    background: url("../img/sub/lfg_r.png") no-repeat left top;
+    width: 154px;
+    height: 53px;
+    cursor: pointer;
+    position: absolute;
+    top: 265px;
+    left:983px;
+}
+#lfg > .lineup02 > .button02:hover,#lfg > .lineup02 > .button02.on{background: url("../img/sub/lfg_2r.png") no-repeat left top;}
+#container2{
+    width: 1100px;
+    position: absolute;
+    left: 437px;
+    top: 365px;
+    /*margin-left: -520px;*/
+}
+
+#container2 > section {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#container2 > section:nth-child(2){display: none;}
+
+
+#container2 > section > article{
+    float: left;
+    height: 270px;
+    width: 213px;
+    margin-left: 48px;
+}
+#container2 > section > .photo5{
+    margin: 31px 0 0 184px;
+}
+#container2 > section > .photo6{
+    margin: 31px;
+}
+#container2 > section > .photo7{
+    margin: 31px 1px;
+}
+
+#lfg .lineup02 .close{
+    width: 44px;
+    height: 45px;
+    right: 25px;
+    top: 19px;
+    cursor: pointer;
+    transition: all 1s;
+}
+#lfg .lineup02 .close:hover{transform: rotate(360deg);}
+
+#lfg .lineup02 .flower{
+    position: absolute;
+    top:295px;
+    right:445px;
+    animation: pop01_flower infinite 5s linear normal;
+}
+#lfg .lineup02 .flower_2{
+       position: absolute;
+       top:256px;
+       left:549px;
+       animation: pop01_flower infinite 5s linear normal;
+
+}
+#lfg .lineup02 .flower_3{
+    position: absolute;
+    bottom:167px;
+    left:433px;
+    animation: pop01_flower infinite 5s linear normal;
+}
+#lfg .lineup02 .flower2{
+    position: absolute;
+    top:144px;
+    left:470px;
+}
+#lfg .lineup02 .flower3{
+    position: absolute;
+    bottom:168px;
+    right:550px;
+}
+
+
+/*lfg end-----------------------------------------------------*/
+
+#cbh{
+    width: 100%;
+    height: 100%;
+    background: url("../img/sub/cbh.jpg") no-repeat left top;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: none;
+}
+
+#cbh .lineup03 > div{
+    position:absolute;
+}
+#cbh .lineup03 .cbh_title{
+    position: absolute;
+    top:50px;
+    left: 620px;
+}
+#cbh > .lineup03 > .button01{
+    background: url("../img/sub/cbh_l.png") no-repeat left top;
+    width: 154px;
+    height: 53px;
+    cursor: pointer;
+    position: absolute;
+    top: 265px;
+    left:818px;
+}
+#cbh > .lineup03 > .button01:hover,#cbh > .lineup03 > .button01.on{background: url("../img/sub/cbh2_l.png") no-repeat left top;}
+#cbh .lineup03 > .button02{
+    background: url("../img/sub/cbh_r.png") no-repeat left top;
+    width: 154px;
+    height: 53px;
+    cursor: pointer;
+    position: absolute;
+    top: 265px;
+    left:983px;
+}
+#cbh > .lineup03 > .button02:hover,#cbh > .lineup03 > .button02.on{background: url("../img/sub/cbh2_r.png") no-repeat left top;}
+
+#container3{
+    width: 820px;
+    position: absolute;
+    left: 542px;
+    top: 390px;
+}
+
+#container3 > section {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#container3 > section:nth-child(2){display: none;}
+
+
+#container3 > section > article{
+    float: left;
+    height: 275px;
+    width: 216px;
+    margin-left: 48px;
+}
+#container3 > section > .photo5{
+    margin: 2px 51px;
+}
+#container3 > section > .photo6{
+    margin: 0 -8px;
+}
+
+#cbh .lineup03 .close{
+    width: 44px;
+    height: 45px;
+    right: 25px;
+    top: 19px;
+    cursor: pointer;
+    transition: all 1s;
+}
+#cbh .lineup03 .close:hover{transform: rotate(360deg);}
+
+#cbh .lineup03 .flower{
+    position: absolute;
+    top: 337px;
+    right: 438px;
+    animation: pop01_flower infinite 5s linear normal;
+}
+#cbh .lineup03 .flower_2{
+    position: absolute;
+    bottom:407px;
+    left:384px;
+    animation: pop01_flower infinite 5s linear normal;
+}
+#cbh .lineup03 .flower_3{
+    position: absolute;
+    bottom:118px;
+    left:445px;
+    animation: pop01_flower infinite 5s linear normal;
+}
+
+#cbh .lineup03 .flower2{
+    position: absolute;
+    top:144px;
+    left:470px;
+}
+#cbh .lineup03 .flower3{
+    position: absolute;
+    bottom:262px;
+    right:504px;
+}
+
+
+/*cbh end--------------------------------------------------------------*/
+
+#movie{
+    width: 100%;
+    height: 100%;
+    background: url("../img/sub/movie.jpg") no-repeat left top;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: none;
+}
+
+#movie .contents > article{
+    position:absolute;
+}
+#movie .contents .movie_title {
+    position: absolute;
+    top: 50px;
+    left: 620px;
+}
+#movie .movie2{
+    position: absolute;
+    top:289px;
+    left: 166px;
+}
+
+#movie .contents > .movie_title2{
+    /*position: absolute;*/
+    top:349px;
+    right:688px;
+}
+#movie .contents > .movie_title3{
+    /*position: absolute;*/
+    top:349px;
+    right:315px;
+}
+#movie .contents > .movie_contents{
+
+    /*position: absolute;*/
+    top:428px;
+    right:490px;
+}
+#movie .contents > .movie_contents2{
+
+    /*position: absolute;*/
+    top:428px;
+    right:166px;
+}
+
+#movie .contents > ul{
+    position: absolute;
+    top:665px;
+    left:1011px;
+}
+#movie .contents > ul >li{
+    float: left;
+    padding-left: 25px;
+}
+#movie .balloon1{
+    position:absolute;
+    top:54px;
+    left:481px;
+    animation: balloon1 2s linear infinite alternate;
+}
+@keyframes balloon1 {
+    0%{
+        top:54px;
+    }
+    50%{
+        top: 100px;
+    }
+    100%{
+        top:130px;
+    }
+}
+#movie .balloon2{
+    position:absolute;
+    top:123px;
+    right:270px;
+    animation: balloon2 2s linear infinite alternate;
+}
+@keyframes balloon2 {
+    0%{
+        top:123px;
+    }
+    50%{
+        top: 150px;
+    }
+    100%{
+        top:170px;
+    }
+}
+#movie .contents .close{
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    right: 25px;
+    top: 19px;
+    cursor: pointer;
+    transition: all 1s;
+}
+#movie .contents .close:hover{transform: rotate(360deg);}
+
+/*movie end-----------------------------------------------------*/
+
+#shop{
+    width: 100%;
+    height: 100%;
+    background: url("../img/sub/shop_bg.jpg") left top;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: none;
+}
+
+#shop .s_title{
+    position: absolute;
+    top:59px;
+    left: 647px;
+
+}
+#shop .book{
+    position: absolute;
+    top:310px;
+    left: 238px;
+}
+
+#shop .goods2{
+    position: absolute;
+    left:796px;
+    top: 640px;
+    width: 977px;
+    height: 340px;
+    /*margin: 0 480px 104px 0;*/
+}
+#shop .goods1{
+    position: absolute;
+    left:796px;
+    top: 283px;
+    width: 977px;
+    height: 357px;
+    /*margin: 283px 480px 0 0;*/
+}
+#shop .close{
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    right: 25px;
+    top: 19px;
+    cursor: pointer;
+    transition: all 1s;
+}
+#shop .close:hover{transform: rotate(360deg);}
+
+/*shop end---------------------------------------------------*/
+
+
+#info{
+    width: 100%;
+    height: 100%;
+    background: url("../img/sub/info.jpg") no-repeat left top;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    display: none;
+}
+
+#info .info_title{
+    position: absolute;
+    top:59px;
+    left: 647px;
+}
+#info .mini_title{
+    position: absolute;
+    top:239px;
+    left:739px;
+}
+#info > .mini_title > .button01 {
+    background: url("../img/sub/ticket_button1.jpg") no-repeat left top;
+    width: 149px;
+    height: 56px;
+    cursor: pointer;
+    float: left;
+}
+
+#info >  .mini_title > .button01:hover,#info > .mini_title > .button01.on{background: url("../img/sub/ticket_button2.jpg") no-repeat left top;}
+#info  .mini_title > .button02{
+    background: url("../img/sub/ticket_button1_2.jpg") no-repeat left top;
+    width: 149px;
+    height: 56px;
+    cursor: pointer;
+    float: left;
+}
+#info >  .mini_title > .button02:hover,#info >  .mini_title > .button02.on{background: url("../img/sub/ticket_button2_12.jpg") no-repeat left top;}
+
+#info  .mini_title > .button03{
+    background: url("../img/sub/ticket_button1_3.jpg") no-repeat left top;
+    width: 149px;
+    height: 56px;
+    cursor: pointer;
+    float: left;
+}
+
+#info_container{
+    background: url("../img/sub/info_bg.jpg") no-repeat left top;
+    width: 1206px;
+    height:609px ;
+    position: absolute;
+    top:295px;
+    left:362px;
+}
+
+#info_container > div {
+    width: 1206px;
+    height:609px ;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#info_container > div:nth-child(2){display: none;}
+
+
+#info_container .ticket > .ticket_title{
+    position: absolute;
+    top:67px;
+    left:527px;
+}
+#info_container .ticket > .ticket_info{
+    position: absolute;
+    top:141px;
+    left:378px;
+}
+#info_container .ticket > .ticket1{
+    position: absolute;
+    top:211px;
+    left:220px;
+}
+#info_container .ticket > .ticket2{
+    position: absolute;
+    top:211px;
+    right:184px;
+}
+#info_container .ticket > .ticket_link{
+    position: absolute;
+    top:385px;
+    left:196px;
+}
+#info_container .ticket > .ticket_link2{
+    position: absolute;
+    top:385px;
+    right:159px;
+}
+
+#info_container .ticket > .ticket_info2{
+    position: absolute;
+    bottom:49px;
+    left:192px;
+}
+
+#info_container .map > .map_title{
+    position: absolute;
+    top:117px;
+    left:675px;
+}
+#info_container .map > .map_01{
+    position: absolute;
+    top:80px;
+    left:108px;
+}
+#info_container .map > .map_info{
+    position: absolute;
+    top:200px;
+    left:675px;
+}
+#info_container .map > .map_button{
+    position: absolute;
+    top:404px;
+    left:675px;
+}
+
+#info .close{
+    position: absolute;
+    width: 50px;
+    height: 51px;
+    right: 25px;
+    top: 19px;
+    cursor: pointer;
+    transition: all 1s;
+}
+#info .close:hover{transform: rotate(360deg);}
